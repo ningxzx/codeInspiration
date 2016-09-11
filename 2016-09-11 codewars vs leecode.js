@@ -4,6 +4,7 @@
 var cache = {};
 /**
  * codewars 6kyu
+ * https://www.codewars.com/kata/paths-in-the-grid/javascript
  * m*n的矩形，从右上角到左下角，只允许向右或向下移动，求一共有多少条路线。
  * 注意：是点的移动，从(m,n)到(0,0)
  * @param m
@@ -26,6 +27,7 @@ const numberOfRoutes = (m, n) =>{
 }
 /**
  * leecode medium
+ * https://leetcode.com/problems/unique-paths/
  * m*n的方块矩形，从右上角到左下角，只允许向右或向下移动，求一共有多少条路线。
  * 注意：在方块上移动，从(m,n)到(0,0)
  * @param m
