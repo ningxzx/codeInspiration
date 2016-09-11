@@ -3,7 +3,9 @@
  */
 var cache = {};
 /**
- * m*n的矩形，从右上角到
+ * codewars 6kyu
+ * m*n的矩形，从右上角到左下角，只允许向右或向下移动，求一共有多少条路线。
+ * 注意：是点的移动，从(m,n)到(0,0)
  * @param m
  * @param n
  * @returns {*}
@@ -22,4 +24,25 @@ const numberOfRoutes = (m, n) =>{
     cache[sumkey] = a
     return a;
 }
-
+/**
+ * leecode medium
+ * m*n的方块矩形，从右上角到左下角，只允许向右或向下移动，求一共有多少条路线。
+ * 注意：在方块上移动，从(m,n)到(0,0)
+ * @param m
+ * @param n
+ * @returns {*}
+ */
+let uniquePaths = (m, n) => {
+    let sumkey=m+'-'+n,a;
+    if(cache[sumkey]){
+        return cache[sumkey];
+    }
+    if(n==1||m==1){
+        a=1
+    }
+    else{
+        a=uniquePaths(m-1,n)+uniquePaths(m,n-1);
+    }
+    cache[sumkey]=a
+    return a;
+}
